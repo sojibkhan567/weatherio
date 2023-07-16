@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Primary meta tag--->
+    <title>Weatherio</title>
+    <meta name="title" content="weatherio" />
+    <meta
+      name="description"
+      content="weatherio is a weather app made by sojib"
+    />
+    <!--favicon-->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Custom css-->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!--Custom Js link-->
+    <script src="./assets/js/app.js" type="module"></script>
+    <script type="module" src="./assets/js/route.js"></script>
+  </head>
+  <body>
+    <!--=========== Header Section Start =============-->
+    <header class="header">
+      <div class="container">
+        <a href="#" class="logo">
+          <img
+            src="./assets/images/logo.png"
+            width="364"
+            height="58"
+            alt="logo"
+          />
+        </a>
+        <!--==== Search Section =====-->
+        <div class="search-view" data-search-view>
+          <!--search button-->
+          <div class="search-wrapper">
+            <input
+              class="search-field"
+              type="search"
+              name="search"
+              placeholder="Search city..."
+              autocomplete="off"
+              data-search-field
+            />
+
+            <span class="m-icon leading-icon">search</span>
+
+            <button
+              class="icon-btn leading-icon has-state"
+              aria-label="close search"
+              data-search-toggler
+            >
+              <span class="m-icon">arrow_back</span>
+            </button>
+          </div>
+          <!--Show past search result after search clicking-->
+          <div class="search-result" data-search-result></div>
+        </div>
+        <!--header search & location btn-->
+        <div class="header-actions">
+          <button
+            class="icon-btn has-state"
+            aria-label="open search"
+            data-search-toggler
+          >
+            <span class="m-icon icon">search</span>
+          </button>
+          <a
+            href="#/current-location"
+            class="btn-primary has-state"
+            data-current-location-btn
+          >
+            <span class="m-icon">my_location</span>
+            <span class="span">Current Location</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!--========== MAIN SECTION START ==========-->
+    <main>
+      <article class="container" data-container>
+        <!--left sidebar start-->
+        <div class="content-left">
+          <!--Current Weather update card-->
+          <section
+            class="section current-weather"
+            aria-label="cureent-weather"
+            data-current-weather
+          ></section>
+
+          <!----5 days forecast card----->
+          <section
+            class="section forecast"
+            aria-labelledby="forecast-label"
+            data-5-day-forecast
+          ></section>
+        </div>
+
+        <!--right sidebar start-->
+        <div class="content-right">
+          <!--=========== TODAY HIGHLIGHT SECTION ==========-->
+          <section
+            class="section highlights"
+            aria-labelledby="highlights-label"
+            data-highlights
+          >
+            <div class="card card-lg"></div>
+          </section>
+
+          <!--=========== HOURLY FORECAST SECTION ==========-->
+          <section
+            class="scetion hourly-forecast"
+            aria-label="hourly forecast"
+            data-hourly-forecast
+          ></section>
+
+          <!--=========== FOOTER SECTION ==========-->
+          <footer class="footer">
+            <p class="body-3">Copyright 2023 Sojib. All Rights Reserved.</p>
+            <p class="body-3">
+              Powered By
+              <a
+                href="https://openweathermap.org/api"
+                title="Free OpenWeather Api"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="/assets/images/openweather.png"
+                  width="150"
+                  height="30"
+                  loading="lazy"
+                  alt="OpenWeather"
+                />
+              </a>
+            </p>
+          </footer>
+        </div>
+        <!--right sidebar-->
+
+        <!--pre-loading-->
+        <div class="loading" data-loading></div>
+      </article>
+    </main>
+
+    <!--=========== 404 PAGE ERROR SECTION ==========-->
+    <section class="error-content" data-error-content>
+      <h2 class="heading">404</h2>
+      <p class="body-1">Page not found</p>
+      <a href="#/weather?lat=23.8987955&lon=89.1295536" class="btn-primary">
+        <span class="span">Go Home</span>
+      </a>
+    </section>
+  </body>
+</html>

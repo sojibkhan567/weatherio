@@ -1,5 +1,5 @@
 weatherio
-weatherio is a weather app made by codewithsadee
+weatherio is a weather app made by sojib
 
 
 
@@ -84,3 +84,15 @@ Friday
 
 
 #---------- FOOTER ----------#
+
+2
+Fair
+Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.
+3
+Moderate
+Members of sensitive groups may experience health effects. The general public is not likely to be affected.
+Poor
+Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects
+5
+Very Poor
+Health warnings of emergency conditions. The entire population is more likely to be affected.
